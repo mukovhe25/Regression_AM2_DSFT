@@ -24,6 +24,7 @@
 # Helper Dependencies
 import numpy as np
 import pandas as pd
+from datetime import datetime
 import pickle
 import json
 
@@ -62,8 +63,8 @@ def _preprocess_data(data):
     
 
     feature_vector_df = feature_vector_df[(feature_vector_df['Commodities'] == 'APPLE GOLDEN DELICIOUS')]
-    predict_vector = feature_vector_df[['Total_Qty_Sold','Stock_On_Hand']]
-                                
+    predict_vector = feature_vector_df[['Weight_Kg', 'Low_Price', 'High_Price', 'Sales_Total', 'Total_Qty_Sold', 'Total_Kg_Sold', 'Stock_On_Hand']]
+
     # ------------------------------------------------------------------------
 
     return predict_vector
